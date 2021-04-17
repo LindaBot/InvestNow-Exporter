@@ -1,0 +1,50 @@
+{
+    "Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged": {
+        "instrument_code": "VAN8287AU",
+        "market_code": "FundNZ"
+    },
+    "Hunter Growth Fund":{
+        "instrument_code":"24722",
+        "market_code":"FundNZ"
+    },
+    "Smartshares NZ Top 50 ETF":{
+        "instrument_code":"FNZ",
+        "market_code":"NZX"
+    },
+    "Smartshares - NZ Top 50 Fund (NS) (FNZ)":{
+        "instrument_code":"FNZ",
+        "market_code":"NZX"
+    },
+    "Smartshares NZ Property ETF":{
+        "instrument_code":"NPF",
+        "market_code":"NZX"
+    },
+    "Smartshares - NZ Property Fund (NS) (NPF)":{
+        "instrument_code":"NPF",
+        "market_code":"NZX"
+    },
+    "Smartshares S&P/NZX 50 ETF":{
+        "instrument_code":"NZG",
+        "market_code":"NZX"
+    },
+    "Smartshares - S&P/NZX 50 ETF (NZG)":{
+        "instrument_code":"NZG",
+        "market_code":"NZX"
+    },
+    "Smartshares NZ Top 10 ETF":{
+        "instrument_code":"TNZ",
+        "market_code":"NZX"
+    },
+    "Smartshares - NZ Top 10 Fund (NS) (TNZ)":{
+        "instrument_code":"TNZ",
+        "market_code":"NZX"
+    },
+    "Smartshares US Large Growth ETF":{
+        "instrument_code":"USG",
+        "market_code":"NZX"
+    },
+    "Smartshares - US Large Growth Fund (NZ) (USG)":{
+        "instrument_code":"USG",
+        "market_code":"NZX"
+    }
+}
