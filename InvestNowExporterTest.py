@@ -1,22 +1,94 @@
 from InvestNowExporter import *
-from NameDecoder import *
+import unittest
 
-def load_JSON():
-    test_cases = [
-        ["investment.json", "investment.csv"]
+class InvestNowExporterTest(unittest.TestCase):
+
+    def _get_exporter(self):
+        return InvestNowExporter({
+            "Smartshares - Emerging Markets Equities ESG (EMG)": {
+                "instrument_code":"EMG",
+                "market_code":"NZX"
+            },
+            "Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged": {
+                "instrument_code": "VAN8287AU",
+                "market_code": "FundNZ"
+            }
+        })
+
+    def test_parses_full_description(self):
+        data = [
+            {
+                "date": "2020-12-14T00:00:00+13:00",
+                "description": "Buy 123 Smartshares - Emerging Markets Equities ESG (EMG) at 2.36",
+                "amount": 522.88
+            },
+            {
+                "date": "2020-12-14T00:00:00+13:00",
+                "description": "Sell 4 Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged at 1.23",
+                "amount": 123.45
+            },
         ]
-    for i, test_case in enumerate(test_cases):
-        exporter = InvestNowExporter(test_cases[0][0], test_cases[0][1])
-        assert exporter.investmentJSON != None, ("Load JSON failed")
+        exporter = self._get_exporter()
+        result = exporter.export(data)
+        
+        self.assertEqual(
+            {
+                "Trade Date": "2020-12-14T00:00:00+13:00",
+                "Instrument Code": "EMG",
+                "Market Code": "NZX",
+                "Quantity": 123,
+                "Price": 2.36,
+                "Transaction Type": "Buy"
+            },
+            result[0]
+        )
 
-def market_name_decoding():
-    # Test case: [Name, instrument_code, market_code]
-    test_cases = [["Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged", "VAN8287AU", "FundNZ"]]
-    for i, test_case in enumerate(test_cases):
-        [instrument_code, market_code] = decodeMarketName(test_case[0])
-        assert [instrument_code, market_code] == [test_case[1], test_case[2]], ("Decode market name failed")
+        self.assertEqual(
+            {
+                "Trade Date": "2020-12-14T00:00:00+13:00",
+                "Instrument Code": "VAN8287AU",
+                "Market Code": "FundNZ",
+                "Quantity": 4,
+                "Price": 1.23,
+                "Transaction Type": "Sell"
+            },
+            result[1]
+        )
+
+    def test_parses_sparse_description(self):
+        data = [
+            {
+                "date": "2020-12-14T00:00:00+13:00",
+                "description": "Buy Smartshares - Emerging Markets Equities ESG (EMG) at 10.00",
+                "amount": 500.00
+            }
+        ]
+        exporter = self._get_exporter()
+        result = exporter.export(data)
+        
+        self.assertEqual(
+            {
+                "Trade Date": "2020-12-14T00:00:00+13:00",
+                "Instrument Code": "EMG",
+                "Market Code": "NZX",
+                "Quantity": 50,
+                "Price": 10.00,
+                "Transaction Type": "Buy"
+            },
+            result[0]
+        )
+    
+    def test_handles_thousands_separators(self):
+        data = [
+            {
+                "date": "2020-12-14T00:00:00+13:00",
+                "description": "Buy 1,234 Smartshares - Emerging Markets Equities ESG (EMG) at 2.36",
+                "amount": 522.88
+            }
+        ]
+        exporter = self._get_exporter()
+        result = exporter.export(data)
+        self.assertEqual(result[0]['Quantity'], 1234)
 
 if __name__ == "__main__":
-    load_JSON()
-    market_name_decoding()
-    print("All tests passed")
+    unittest.main()
