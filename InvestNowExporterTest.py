@@ -52,7 +52,7 @@ class InvestNowExporterTest(unittest.TestCase):
                 "Price": 1.23,
                 "Transaction Type": "Sell"
             },
-            result[0]
+            result[1]
         )
 
     def test_parses_sparse_description(self):
