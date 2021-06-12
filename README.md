@@ -19,4 +19,4 @@ Current the exporter only supports funds outlined in market_code.json. This is d
 * Click on "Preview" - this shows all of your investment activity over the past year
 * Right click at the root level and click on copy object
 * Paste it in investment.json in this repo
-* Run `python3 InvestnowExporter.py`
+* Run `python3 InvestnowExporter.py investments.json > investments.csv`
