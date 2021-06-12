@@ -46,5 +46,25 @@
     "Smartshares - US Large Growth Fund (NZ) (USG)":{
         "instrument_code":"USG",
         "market_code":"NZX"
+    },
+    "Smartshares - Emerging Markets Equities ESG (EMG)":{
+        "instrument_code":"EMG",
+        "market_code":"NZX"
+    },
+    "Smartshares - Global Equities ESG (ESG)":{
+        "instrument_code":"ESG",
+        "market_code":"NZX"
+    },
+    "Smartshares - US Equities ESG (USA)":{
+        "instrument_code":"USA",
+        "market_code":"NZX"
+    },
+    "Smartshares - NZ Mid Cap Fund (NS) (MDZ)":{
+        "instrument_code":"MDZ",
+        "market_code":"NZX"
+    },
+    "Smartshares - Europe Equities ESG (EUG)":{
+        "instrument_code":"EUG",
+        "market_code":"NZX"
     }
 }
