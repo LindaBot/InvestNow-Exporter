@@ -16,6 +16,7 @@ class InvestNowExporter:
         """Deconstruct a cryptic descrption string given by investnow to instrument_code, market_code, quantity, price and transaction_type
         I hate InvestNow JSON too.
         Args:
+        hello
             row ([JSON]): [One row of the transaction JSON]
         """        
         # Example: Buy 1,234 Smartshares - Emerging Markets Equities ESG (EMG) at 2.36
