@@ -1,13 +1,13 @@
 # InvestNow Exporter
 
-## Purpose 
+## Purpose
 The purpose of this project is to export [InvestNow](https://investnow.co.nz/)'s transaction to a format that can be imported by [Sharesight](https://www.sharesight.com/nz/)
 
 ## Pre-requisite
 * Python3
 
 ## Note
-Current the exporter only supports funds outlined in market_code.json. This is due to InvestNow's customizing the name of each fund, making it very difficult to find the instrument code and market code. 
+Current the exporter only supports funds outlined in market_code.json. This is due to InvestNow's customizing the name of each fund, making it very difficult to find the instrument code and market code.
 * If you see some funds are missing (Chances are there are a lot, please submit a pull request to update the `market_code.json`) Automatic detection will hopefully done soon to remove the need for this market_code.json file.
 
 ## Instructions
@@ -19,4 +19,4 @@ Current the exporter only supports funds outlined in market_code.json. This is d
 * Click on "Preview" - this shows all of your investment activity over the past year
 * Right click at the root level and click on copy object
 * Paste it in investment.json in this repo
-* Run `python3 InvestnowExporter.py investments.json > investments.csv`
+* Run `python3 InvestnowExporter.py investment.json > investment.csv`
