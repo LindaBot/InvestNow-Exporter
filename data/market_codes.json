@@ -1,70 +1,86 @@
 {
+    "Vanguard International Shares Select Exclusions Index Fund": {
+        "instrument_code": "VAN1579AU",
+        "market_code": "FundNZ"
+    },
     "Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged": {
         "instrument_code": "VAN8287AU",
         "market_code": "FundNZ"
     },
-    "Hunter Growth Fund":{
-        "instrument_code":"24722",
-        "market_code":"FundNZ"
+    "Hunter Growth Fund": {
+        "instrument_code": "24722",
+        "market_code": "FundNZ"
     },
-    "Smartshares NZ Top 50 ETF":{
-        "instrument_code":"FNZ",
-        "market_code":"NZX"
+    "Smartshares NZ Top 50 ETF": {
+        "instrument_code": "FNZ",
+        "market_code": "NZX"
     },
-    "Smartshares - NZ Top 50 Fund (NS) (FNZ)":{
-        "instrument_code":"FNZ",
-        "market_code":"NZX"
+    "Smartshares - NZ Top 50 Fund (NS) (FNZ)": {
+        "instrument_code": "FNZ",
+        "market_code": "NZX"
     },
-    "Smartshares NZ Property ETF":{
-        "instrument_code":"NPF",
-        "market_code":"NZX"
+    "Smartshares NZ Property ETF": {
+        "instrument_code": "NPF",
+        "market_code": "NZX"
     },
-    "Smartshares - NZ Property Fund (NS) (NPF)":{
-        "instrument_code":"NPF",
-        "market_code":"NZX"
+    "Smartshares - NZ Property Fund (NS) (NPF)": {
+        "instrument_code": "NPF",
+        "market_code": "NZX"
     },
-    "Smartshares S&P/NZX 50 ETF":{
-        "instrument_code":"NZG",
-        "market_code":"NZX"
+    "Smartshares S&P/NZX 50 ETF": {
+        "instrument_code": "NZG",
+        "market_code": "NZX"
     },
-    "Smartshares - S&P/NZX 50 ETF (NZG)":{
-        "instrument_code":"NZG",
-        "market_code":"NZX"
+    "Smartshares - S&P/NZX 50 ETF (NZG)": {
+        "instrument_code": "NZG",
+        "market_code": "NZX"
     },
-    "Smartshares NZ Top 10 ETF":{
-        "instrument_code":"TNZ",
-        "market_code":"NZX"
+    "Smartshares NZ Top 10 ETF": {
+        "instrument_code": "TNZ",
+        "market_code": "NZX"
     },
-    "Smartshares - NZ Top 10 Fund (NS) (TNZ)":{
-        "instrument_code":"TNZ",
-        "market_code":"NZX"
+    "Smartshares - NZ Top 10 Fund (NS) (TNZ)": {
+        "instrument_code": "TNZ",
+        "market_code": "NZX"
     },
-    "Smartshares US Large Growth ETF":{
-        "instrument_code":"USG",
-        "market_code":"NZX"
+    "Smartshares US Large Growth ETF": {
+        "instrument_code": "USG",
+        "market_code": "NZX"
     },
-    "Smartshares - US Large Growth Fund (NZ) (USG)":{
-        "instrument_code":"USG",
-        "market_code":"NZX"
+    "Smartshares - US Large Growth Fund (NZ) (USG)": {
+        "instrument_code": "USG",
+        "market_code": "NZX"
     },
-    "Smartshares - Emerging Markets Equities ESG (EMG)":{
-        "instrument_code":"EMG",
-        "market_code":"NZX"
+    "Smartshares - Emerging Markets Equities ESG (EMG)": {
+        "instrument_code": "EMG",
+        "market_code": "NZX"
     },
-    "Smartshares - Global Equities ESG (ESG)":{
-        "instrument_code":"ESG",
-        "market_code":"NZX"
+    "Smartshares - Global Equities ESG (ESG)": {
+        "instrument_code": "ESG",
+        "market_code": "NZX"
     },
-    "Smartshares - US Equities ESG (USA)":{
-        "instrument_code":"USA",
-        "market_code":"NZX"
+    "Smartshares - Global Equities ESG ETF (ESG)": {
+        "instrument_code": "ESG",
+        "market_code": "NZX"
     },
-    "Smartshares - NZ Mid Cap Fund (NS) (MDZ)":{
-        "instrument_code":"MDZ",
-        "market_code":"NZX"
+    "Smartshares - US Equities ESG (USA)": {
+        "instrument_code": "USA",
+        "market_code": "NZX"
     },
-    "Smartshares - Europe Equities ESG (EUG)":{
-        "instrument_code":"EUG",
-        "market_code":"NZX"
+    "Smartshares - NZ Mid Cap Fund (NS) (MDZ)": {
+        "instrument_code": "MDZ",
+        "market_code": "NZX"
+    },
+    "Smartshares - Europe Equities ESG (EUG)": {
+        "instrument_code": "EUG",
+        "market_code": "NZX"
+    },
+    "Smartshares - Emerging Markets Fund (NS) (EMF)": {
+        "instrument_code": "EMF",
+        "market_code": "NZX"
+    },
+    "Smartshares - Emerging Markets ETF (EMF)": {
+        "instrument_code": "EMF",
+        "market_code": "NZX"
     }
 }

@@ -1,16 +1,21 @@
 from InvestNowExporter import *
 import unittest
 
+
 class InvestNowExporterTest(unittest.TestCase):
 
     def _get_exporter(self):
         return InvestNowExporter({
             "Smartshares - Emerging Markets Equities ESG (EMG)": {
-                "instrument_code":"EMG",
-                "market_code":"NZX"
+                "instrument_code": "EMG",
+                "market_code": "NZX"
             },
             "Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged": {
                 "instrument_code": "VAN8287AU",
+                "market_code": "FundNZ"
+            },
+            "Vanguard International Shares Select Exclusions Index Fund": {
+                "instrument_code": "VAN1579AU",
                 "market_code": "FundNZ"
             }
         })
@@ -27,10 +32,15 @@ class InvestNowExporterTest(unittest.TestCase):
                 "description": "Sell 4 Vanguard Intl Shares Select Exclusions Index Fund - NZD Hedged at 1.23",
                 "amount": 123.45
             },
+            {
+                "date": "2020-12-14T00:00:00+13:00",
+                "description": "Buy 579.98  Vanguard International Shares Select Exclusions Index Fund at 1.6073",
+                "amount": 1000
+            },
         ]
         exporter = self._get_exporter()
         result = exporter.export(data)
-        
+
         self.assertEqual(
             {
                 "Trade Date": "2020-12-14T00:00:00+13:00",
@@ -55,6 +65,18 @@ class InvestNowExporterTest(unittest.TestCase):
             result[1]
         )
 
+        self.assertEqual(
+            {
+                "Trade Date": "2020-12-14T00:00:00+13:00",
+                "Instrument Code": "VAN1579AU",
+                "Market Code": "FundNZ",
+                "Quantity": 579.98,
+                "Price": 1.61,
+                "Transaction Type": "Buy"
+            },
+            result[2]
+        )
+
     def test_parses_sparse_description(self):
         data = [
             {
@@ -65,7 +87,7 @@ class InvestNowExporterTest(unittest.TestCase):
         ]
         exporter = self._get_exporter()
         result = exporter.export(data)
-        
+
         self.assertEqual(
             {
                 "Trade Date": "2020-12-14T00:00:00+13:00",
@@ -77,7 +99,7 @@ class InvestNowExporterTest(unittest.TestCase):
             },
             result[0]
         )
-    
+
     def test_handles_thousands_separators(self):
         data = [
             {
@@ -89,6 +111,7 @@ class InvestNowExporterTest(unittest.TestCase):
         exporter = self._get_exporter()
         result = exporter.export(data)
         self.assertEqual(result[0]['Quantity'], 1234)
+
 
 if __name__ == "__main__":
     unittest.main()
